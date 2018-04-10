@@ -1,0 +1,47 @@
+body {
+  /* Choose a font-family */
+  /* Adjust the margins */
+  /* Adjust the width */
+}
+h2 {
+  /* Choose a font */
+  /* Adjust the margins */
+}
+p {
+  /* Choose a font */
+  /* Adjust the margins */
+}
+ul {
+  /* Get rid of bullet points - try to find this information in W3schools */
+  /* Adjust padding and margins */
+}
+
+.boxes > * {
+  /* Adjust padding, background color, and and font color */
+}
+
+/* Try selecting the boxes class */ {
+  /* The code below will set up your layout for smaller screens */
+  display: grid;
+  grid-gap: .5rem; /* Add space between rows and columns */
+  /* Also try playing with grid-column-gap and grid-row-gap */
+  grid-auto-rows: minmax(125px, auto); /* Control height of new rows - try inputting new values for the min and max */
+}
+
+/* Try setting the background image of each li component in boxes */ {
+  display: flex;
+  align-items: flex-end;
+}
+
+@media screen and (min-width: 40em) { /* Set up large browser compatibility */
+  .boxes {
+    grid-template-columns: repeat(6, 1fr); /* Tell the grid how many columns should exist */
+    /* Adjust grid-gap */
+  }
+  .boxes li:nth-child(1) { /* Target first item and place with grid-column and grid-row */
+    grid-column: 1 / -1; /* Item should start at column line 1 and span whole container with -1 */
+    grid-row: span 3; /* Item should span 3 rows */
+  }
+
+  /* Try to place the rest of the children */
+}
